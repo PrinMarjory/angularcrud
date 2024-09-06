@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductsService } from '../products.service';
 import { ProductInterface } from '../interfaces/product.interface';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-product-get',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './product-get.component.html',
   styleUrl: './product-get.component.css',
 })

@@ -2,20 +2,20 @@
   "products": [
     {
       "id": "1",
-      "name": "Vélo VTT RockRider",
-      "description": "Presque neuf",
-      "price": 120
+      "name": "Lait 1L",
+      "description": "Lait UHT demi-écrémé",
+      "price": 1.5
     },
     {
       "id": "2",
-      "name": "Vélo de ville Peugeot",
-      "description": "Un look d'un autre temps",
-      "price": 190
+      "name": "Champignon shiitake 250g",
+      "description": "Origine: japon",
+      "price": 2.75
     },
     {
       "id": "7cdd",
-      "name": "Cuisse de poulet",
-      "description": "Poulet fermier 500g",
+      "name": "Cuisse de poulet 500g",
+      "description": "Poulet fermier label rouge",
       "price": 3
     }
   ]

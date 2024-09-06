@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import {
   NewProductInterface,
+  PatchProductInterface,
   ProductInterface,
 } from './interfaces/product.interface';
 
 import { HttpClient } from '@angular/common/http';
 import { Observable, BehaviorSubject, catchError, throwError } from 'rxjs';
- 
+
+
 @Injectable({
   providedIn: 'root',
 })
@@ -25,5 +27,21 @@ export class ProductsService {
   loadProducts(): Observable<ProductInterface[]> {
     console.log(`Dans loadProduct de ProductsService`);
     return this.http.get<ProductInterface[]>(ProductsService.url);
+  }
+
+  loadOneProduct(id: string): Observable<ProductInterface> {
+    console.log(`Dans loadOneProduct de ProductsService`);
+    return this.http.get<ProductInterface>(`${ProductsService.url}/${id}`);
+  }
+
+  patchProduct(
+    id: string,
+    partialProduct: PatchProductInterface
+  ): Observable<ProductInterface> {
+    console.log(`Dans patchProduct de ProductsService`);
+    return this.http.patch<ProductInterface>(
+      `${ProductsService.url}/${id}`,
+      partialProduct
+    );
   }
 }

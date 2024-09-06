@@ -5,7 +5,7 @@ import { ProductGetComponent } from './product-get/product-get.component';
 
 export const routes: Routes = [
   { path: 'add', component: ProductAddComponent },
-  { path: 'edit:id', component: ProductEditComponent },
+  { path: 'edit/:id', component: ProductEditComponent },
   { path: 'get', component: ProductGetComponent },
 
 ];
