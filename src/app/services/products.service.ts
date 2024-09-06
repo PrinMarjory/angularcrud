@@ -3,10 +3,10 @@ import {
   NewProductInterface,
   PatchProductInterface,
   ProductInterface,
-} from './interfaces/product.interface';
+} from '../interfaces/product.interface';
 
 import { HttpClient } from '@angular/common/http';
-import { Observable, BehaviorSubject, catchError, throwError } from 'rxjs';
+import { Observable, BehaviorSubject, catchError, throwError, from } from 'rxjs';
 
 
 @Injectable({

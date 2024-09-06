@@ -7,7 +7,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { NewProductInterface } from '../interfaces/product.interface';
-import { ProductsService } from '../products.service';
+import { ProductsService } from '../services/products.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,10 +19,10 @@ import { Router } from '@angular/router';
 })
 
 export class ProductAddComponent implements OnInit {
-  productForm!: FormGroup; //l'opérateur de non-nullité (!) indique à TypeScript que l'on est certain que
 
-  // productForm sera initialisé avant d'être utilisé
+  productForm!: FormGroup; //l'opérateur de non-nullité (!) indique à TypeScript que l'on est certain que
   isSubmitted = false;
+  errorMessage: string | null = null;
 
   constructor(
     private fb: FormBuilder,
@@ -55,7 +55,7 @@ export class ProductAddComponent implements OnInit {
 
         error: (error) => {
           console.error(`Erreur lors de l'ajout du produit:`, error);
-          // Gérez l'erreur (par exemple, affichez un message à l'utilisateur)
+          this.errorMessage = 'Une erreur est survenue lors de l\'ajout du produit. Veuillez réessayer.';
         },
       });
     } else console.log(`Problème lors de l'ajout du formulaire`);

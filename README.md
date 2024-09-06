@@ -1,27 +1,88 @@
-# Angularcrud
+# AngularCRUD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+## Présentation de l'application
 
-## Development server
+AngularCRUD est une application web développée avec Angular qui permet de gérer une liste de produits. Les fonctionnalités principales incluent l'ajout, la modification, la suppression et l'affichage des produits. Cette application utilise un serveur JSON pour simuler une API RESTful pour les opérations CRUD (Create, Read, Update, Delete).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Choix d'architecture principaux
 
-## Code scaffolding
+### Structure du projet
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+L'application est structurée de manière modulaire pour faciliter la maintenance et l'évolutivité. Voici les principaux dossiers et fichiers :
 
-## Build
+- **src/app** : Contient les composants, services et modules de l'application.
+  - **components** : Contient les composants Angular.
+    - **product-add** : Composant pour ajouter un produit.
+    - **product-edit** : Composant pour modifier un produit.
+    - **product-get** : Composant pour afficher la liste des produits.
+  - **services** : Contient les services Angular.
+    - **products.service.ts** : Service pour gérer les opérations CRUD sur les produits.
+  - **interfaces** : Contient les interfaces TypeScript.
+    - **product.interface.ts** : Interface pour définir la structure d'un produit.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Services
 
-## Running unit tests
+Les services sont utilisés pour encapsuler la logique métier et les appels HTTP. Le service `ProductsService` est responsable de toutes les opérations CRUD sur les produits.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Composants
 
-## Running end-to-end tests
+Les composants sont utilisés pour gérer l'interface utilisateur. Chaque composant est responsable d'une fonctionnalité spécifique, comme l'ajout, la modification ou l'affichage des produits.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Installation et lancement de l'application
 
-## Further help
+### Prérequis
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Node.js (version 12 ou supérieure)
+- Angular CLI (version 12 ou supérieure)
+- JSON Server (pour simuler une API RESTful)
+
+### Étapes d'installation
+
+1. **Cloner le dépôt**
+
+   ```sh
+   git clone https://github.com/votre-utilisateur/angularcrud.git
+   cd angularcrud
+   ```
+
+2. **Installer les dépendances**
+
+   ```sh
+   npm install
+   ```
+
+3. **Installer JSON Server**
+
+   ```sh
+   npm install -g json-server
+   ```
+
+### Lancer l'application
+
+1. **Démarrer le serveur JSON**
+
+   JSON Server utilise un fichier `db.json` pour simuler une API RESTful. Assurez-vous que ce fichier est présent à la racine de votre projet.
+
+   ```sh
+   json-server --watch db.json
+   ```
+
+2. **Démarrer l'application Angular**
+
+   Utilisez Angular CLI pour démarrer l'application.
+
+   ```sh
+   ng serve
+   ```
+
+3. **Accéder à l'application**
+
+   Ouvrez votre navigateur et accédez à l'URL suivante :
+
+   ```
+   http://localhost:4200
+   ```
+
+## Conclusion
+
+AngularCRUD est une application simple mais complète pour gérer une liste de produits. Elle utilise Angular pour le front-end et JSON Server pour simuler une API RESTful. Cette architecture modulaire et ces choix technologiques permettent de développer une application maintenable et évolutive.
