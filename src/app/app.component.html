@@ -1,9 +1,21 @@
 <header class="container">
   <h1>TP CRUD Angular</h1>
-  <nav class="d-flex gap-3">
-    <a routerLink="/add" routerLinkActive="selected-menu">Ajouter un produit</a>
-    <a routerLink="/get" routerLinkActive="selected-menu">Voir les produits</a>
-
+  <nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/add" routerLinkActive="active">Ajouter un produit</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/get" routerLinkActive="active">Voir les produits</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 </header>
 <main class="main container">

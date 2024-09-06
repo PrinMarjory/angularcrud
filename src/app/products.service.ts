@@ -16,7 +16,7 @@ import { Observable, BehaviorSubject, catchError, throwError } from 'rxjs';
 export class ProductsService {
 
   static url = 'http://localhost:3000/products';
-  
+
   constructor(private http: HttpClient) {}
 
   addProduct(product: NewProductInterface): Observable<ProductInterface> {
@@ -44,4 +44,10 @@ export class ProductsService {
       partialProduct
     );
   }
+
+  deleteProduct(id: string): Observable<ProductInterface> {
+    console.log(`Dans deleteProduct de ProductsService`);
+    return this.http.delete<ProductInterface>(`${ProductsService.url}/${id}`);
+  }
+
 }
