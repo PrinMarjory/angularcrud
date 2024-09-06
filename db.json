@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Vélo VTT RockRider",
+      "description": "Presque neuf",
+      "price": 120
+    },
+    {
+      "id": "2",
+      "name": "Vélo de ville Peugeot",
+      "description": "Un look d'un autre temps",
+      "price": 190
+    },
+    {
+      "id": "7cdd",
+      "name": "Cuisse de poulet",
+      "description": "Poulet fermier 500g",
+      "price": 3
+    }
+  ]
+}
